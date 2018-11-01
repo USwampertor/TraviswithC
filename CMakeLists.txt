@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5 FALTA_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 set(CMAKE_CXX_FLAGS)
 
