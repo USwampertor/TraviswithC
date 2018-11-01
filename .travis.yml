@@ -13,10 +13,15 @@ addons:
       - cmake
 
 script:
+  - echo "Creating build directory..."
   - mkdir build
   - cd build
   - cmake ..
   - make
   - ./TravisTest
 
-after_install:
+after_script:
+  - echo "Finished script..."
+
+after_success:
+  - echo "Congratulations, you didn't fuck up"

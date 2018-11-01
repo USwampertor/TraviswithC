@@ -1,5 +1,5 @@
 ################################################################################
-# Minimum requires build for cmake 
+# Minimum required build for cmake 
 ################################################################################
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
@@ -23,5 +23,5 @@ enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
 
-#creates executable
+#creates an executable which can be used to run in travis
 add_executable(TravisTest ${TARGET_SRC})
