@@ -12,13 +12,11 @@ addons:
       - g++-7
       - cmake
 
-before_install:
-
 script:
- - mkdir build
- - cd build
- - cmake ..
- - make
- - ./TravisTest
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - ./TravisTest
 
 after_install:
