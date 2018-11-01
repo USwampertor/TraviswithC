@@ -1,15 +1,27 @@
+################################################################################
+# Minimum requires build for cmake 
+################################################################################
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
+#Prerequisites
 set(CMAKE_CXX_FLAGS)
 
-set(UNITTESTING_VERSIO_MAJOR 1)
-set(UNITTESTING_VERSIO_MINOR 0)
+#set(COMMON_INCLUDES ./include/)
+#set(COMMON_SOURCES ./src/)
+
+#This variables are for setting the minimum and maximun requires for unitTesting
+set(UNITTESTING_VERSION_MAJOR 1)
+set(UNITTESTING_VERSION_MINOR 0)
 set(LEARN_CMAKE_VERSION_PATCH 0)
 
+#sets cmake to debug build
 set(CMAKE_BUILD_TYPE Debug)
 
+#PROJECT start
 project(TravisTest)
+enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
 
+#creates executable
 add_executable(TravisTest ${TARGET_SRC})
