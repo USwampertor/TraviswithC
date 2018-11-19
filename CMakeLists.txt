@@ -25,3 +25,6 @@ SET(TARGET_SRC ./main.cpp)
 
 #creates an executable which can be used to run in travis
 add_executable(TravisTest ${TARGET_SRC})
+
+find_package (Threads)
+target_link_libraries(tests gtest ${CMAKE_THREAD_LIBS_INIT})
