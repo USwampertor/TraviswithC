@@ -11,7 +11,7 @@ addons:
       - gcc-7
       - g++-7
       - cmake
-      #- gtest
+      - gtest
 
 script:
   - echo "Creating build directory..."
