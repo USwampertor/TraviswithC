@@ -20,7 +20,7 @@ set(LEARN_CMAKE_VERSION_PATCH 0)
 set(CMAKE_BUILD_TYPE Debug)
 
 #Debug mode
-enable_testing()
+#enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
 
