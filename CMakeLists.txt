@@ -3,11 +3,13 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
+project(TravisTest)
+
+#included libraries
+include(gtest.cmake)
+
 #Prerequisites
 set(CMAKE_CXX_FLAGS)
-
-#set(COMMON_INCLUDES ./include/)
-#set(COMMON_SOURCES ./src/)
 
 #This variables are for setting the minimum and maximun requires for unitTesting
 set(UNITTESTING_VERSION_MAJOR 1)
@@ -17,9 +19,7 @@ set(LEARN_CMAKE_VERSION_PATCH 0)
 #sets cmake to debug build
 set(CMAKE_BUILD_TYPE Debug)
 
-#PROJECT start
-project(TravisTest)
-include(gtest.cmake)
+#Debug mode
 enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
@@ -28,4 +28,4 @@ SET(TARGET_SRC ./main.cpp)
 add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
-target_link_libraries(tests gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
