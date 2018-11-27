@@ -18,8 +18,9 @@ script:
   - mkdir build
   - cd build
   - cmake ..
-  - make
+  - make all
   - ./TravisTest
+  - echo $?
 
 after_script:
   - echo "Finished script..."
