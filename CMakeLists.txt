@@ -28,4 +28,4 @@ SET(TARGET_SRC ./main.cpp)
 add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
-#target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
