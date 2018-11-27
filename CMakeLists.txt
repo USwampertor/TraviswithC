@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(TravisTest)
 
 #included libraries
-#include(gtest.cmake)
+include(gtest.cmake)
 
 #Prerequisites
 set(CMAKE_CXX_FLAGS)
