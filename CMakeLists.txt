@@ -30,4 +30,4 @@ add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
 target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
-target_compile_options(tests PRIVATE /std:c++17 /W4 /WX)
+target_compile_options(TravisTest PRIVATE /std:c++17 /W4 /WX)
