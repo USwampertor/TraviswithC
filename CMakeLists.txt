@@ -19,6 +19,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 #PROJECT start
 project(TravisTest)
+include(gtest.cmake)
 enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
