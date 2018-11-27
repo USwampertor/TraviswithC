@@ -3,13 +3,14 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
-project(TravisTest)
+project(GTESTTravis)
 
 #included libraries
 include(gtest.cmake)
 
 #Prerequisites
 set(CMAKE_CXX_FLAGS)
+SET(COVERAGE OFF CACHE BOOL "Coverage")
 
 #This variables are for setting the minimum and maximun requires for unitTesting
 set(UNITTESTING_VERSION_MAJOR 1)
@@ -29,3 +30,4 @@ add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
 target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
+target_compile_options(tests PRIVATE /std:c++17 /W4 /WX)
