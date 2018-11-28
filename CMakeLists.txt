@@ -3,6 +3,7 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
+#Project Name
 project(GTESTTravis)
 
 #included libraries
@@ -21,7 +22,7 @@ set(LEARN_CMAKE_VERSION_PATCH 0)
 set(CMAKE_BUILD_TYPE Debug)
 
 #Debug mode
-#enable_testing()
+enable_testing()
 
 SET(TARGET_SRC ./main.cpp)
 
@@ -31,5 +32,3 @@ add_executable(TravisTest ${TARGET_SRC})
 find_package (Threads)
 
 target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
-
-#install(TARGETS TravisTest DESTINATION bin)

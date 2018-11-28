@@ -22,7 +22,6 @@ script:
   - make 
   - ./TravisTest
 
-
 after_script:
   - echo "Finished script..."
 
