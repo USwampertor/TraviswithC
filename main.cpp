@@ -2,14 +2,21 @@
 #include <gtest/gtest.h>
 #include <iostream>
 using namespace std;
-int main(int argc, char **argv) {
-  printf("Hello from Travis C output \n");
-  ::testing::InitGoogleTest(&argc,argv);
-  return RUN_ALL_TESTS();
+
+struct FAILURE_CHECKER {
+  int m_fails = 0;
 }
 
-TEST(Math, Basic_Test) {
+
+int main(int argc, char **argv) {
+
+  printf("Hello from Travis C output \n");
+  ::testing::InitGoogleTest(&argc,argv);
+  RUN_ALL_TESTS();
+  if()
+}
+
+TEST_F(FAILURE_CHECKER, Basic_Test) {
   EXPECT_TRUE(1 == 1);
-  int t = ::testing::Test::HasFailure();
-  std::cout << t;
+  m_fails += ::testing::Test::HasFailure();
 }
