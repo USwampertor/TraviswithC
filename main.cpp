@@ -9,5 +9,6 @@ int main(int argc, char **argv) {
 
 TEST(Math, Basic_Test) {
   EXPECT_TRUE(1 == 1);
-  printf(::testing::Test::HasFailure());
+  int t = ::testing::Test::HasFailure();
+  printf(t);
 }
