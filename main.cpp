@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-struct Fixture {
+struct Fixture : public ::testing::Test {
   virtual void SetUpTestCase() {
     fails = 0;
   }
@@ -14,7 +14,7 @@ struct Fixture {
     }
   }
 
-  int fails = 0;
+  unsigned fails = 0;
 };
 
 
