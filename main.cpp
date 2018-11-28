@@ -5,15 +5,14 @@ using namespace std;
 
 struct FAILURE_CHECKER {
   int m_fails = 0;
-}
+};
 
 
 int main(int argc, char **argv) {
 
   printf("Hello from Travis C output \n");
   ::testing::InitGoogleTest(&argc,argv);
-  RUN_ALL_TESTS();
-  if()
+  return RUN_ALL_TESTS();
 }
 
 TEST_F(FAILURE_CHECKER, Basic_Test) {
