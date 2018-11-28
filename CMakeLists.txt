@@ -32,4 +32,4 @@ find_package (Threads)
 
 target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
 
-install(TARGETS TravisTest DESTINATION bin)
+#install(TARGETS TravisTest DESTINATION bin)
