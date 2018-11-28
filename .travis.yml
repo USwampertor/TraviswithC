@@ -21,7 +21,7 @@ script:
   - cmake ..
   - make 
   - ./TravisTest
-
+  - echo $?
 after_script:
   - echo "Finished script..."
 
