@@ -1,3 +1,4 @@
+dist: trusty
 os: linux
 sudo: false
 language: cpp
@@ -14,6 +15,7 @@ addons:
 
 script:
   - echo "Creating build directory..."
+  - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7
   - mkdir build
   - cd build
   - cmake ..
