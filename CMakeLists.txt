@@ -29,5 +29,7 @@ SET(TARGET_SRC ./main.cpp)
 add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
+
+target_compile_options(tests PRIVATE -std=c++11 -g -Wall -Werror -Wextra -Wpedantic -Wconversion -Wswitch-default -Wswitch-enum -Wunreachable-code -Wwrite-strings -Wcast-align -Wshadow -Wundef)
+
 target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
-target_compile_options(TravisTest PRIVATE /std:c++17 /W4 /WX)
