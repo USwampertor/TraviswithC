@@ -29,8 +29,3 @@ TEST_F(Fixture, bar) {
   EXPECT_EQ(1,1);
   fails += ::testing::Test::HasFailure();
 }
-
-TEST_F(Fixture, foo) {
-  EXPECT_EQ(1,0);
-  fails += ::testing::Test::HasFailure();
-}
