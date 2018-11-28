@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std;
 
-struct Fixture : public ::testing::Test {
+struct Testing : public ::testing::Test {
   virtual void SetUp() {
     fails = 0;
   }
 
   virtual void TearDown() {
     if (fails > 0) {
-      std::cerr << "Fixture::TearDown sees failures" << std::endl;
+      std::cerr << "Testing::TearDown sees failures" << std::endl;
     }
   }
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   return RUN_ALL_TESTS();
 }
 
-TEST_F(Fixture, bar) {
+TEST_F(Testing, bar) {
   EXPECT_EQ(1,1);
   fails += ::testing::Test::HasFailure();
 }

@@ -21,9 +21,13 @@ script:
   - cmake ..
   - make 
   - ./TravisTest
-  - echo $?
+
+
 after_script:
   - echo "Finished script..."
 
 after_success:
   - echo "Congratulations, you didn't fuck up"
+
+after_failure:
+  - echo "Build failed. See above for errors"
