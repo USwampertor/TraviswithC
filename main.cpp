@@ -22,7 +22,8 @@ int main(int argc, char **argv) {
 
   printf("Hello from Travis C output \n");
   ::testing::InitGoogleTest(&argc,argv);
-  return RUN_ALL_TESTS();
+  RUN_ALL_TESTS();
+  std::cout << fails;
 }
 
 TEST_F(Fixture, bar) {
