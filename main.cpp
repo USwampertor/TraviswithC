@@ -4,11 +4,11 @@
 using namespace std;
 
 struct FAILURE_CHECKER {
-  virtual void SetUp() {
+  virtual void SetUpTestCase() {
     m_fails = 0;
   }
 
-  virtual void TearDown() {
+  virtual void TearDownTestCase() {
     if (m_fails > 0) {
       std::cerr << "Fixture::TearDown sees failures" << std::endl;
     }
