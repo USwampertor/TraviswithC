@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <gtest/gtest.h>
+#include <iostream>
 using namespace std;
 int main(int argc, char **argv) {
   printf("Hello from Travis C output \n");
@@ -10,5 +11,5 @@ int main(int argc, char **argv) {
 TEST(Math, Basic_Test) {
   EXPECT_TRUE(1 == 1);
   int t = ::testing::Test::HasFailure();
-  printf(t);
+  std::cout << t;
 }
