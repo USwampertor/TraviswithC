@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(GTESTTravis)
 
 #included libraries
-#include(gtest.cmake)
+include(gtest.cmake)
 
 #Prerequisites
 set(CMAKE_CXX_FLAGS)
@@ -30,4 +30,6 @@ add_executable(TravisTest ${TARGET_SRC})
 
 find_package (Threads)
 
-#target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(TravisTest gtest ${CMAKE_THREAD_LIBS_INIT})
+
+install(TravisTest)
